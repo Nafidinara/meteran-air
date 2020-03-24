@@ -19,6 +19,7 @@ class CreateMastersTable extends Migration
             $table->bigInteger('harga_m2_brh');
             $table->bigInteger('beban');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

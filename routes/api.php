@@ -27,6 +27,12 @@ Route::prefix('v1')->group(function () {
 
     Route::prefix('pelanggan')->group(function () {
         Route::post('add','DataController@create');
+        Route::post('update_tagihan/{pelanggan_id}','DataController@create_tagihan');
         Route::get('all','DataController@index');
+    });
+
+    Route::prefix('master')->group(function () {
+        Route::get('all','DataController@all_data_master');
+        Route::post('update','DataController@update_data_master');
     });
 });

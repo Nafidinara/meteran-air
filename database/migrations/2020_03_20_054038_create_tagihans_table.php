@@ -23,9 +23,6 @@ class CreateTagihansTable extends Migration
             $table->bigInteger('harga_m2')->default(0);
             $table->bigInteger('jml_m2')->default(0);
             $table->bigInteger('beban')->default(0);
-            $table->bigInteger('hutang')->default(0);
-            $table->bigInteger('simpanan')->default(0);
-            $table->integer('simp_status')->default(0);
             $table->bigInteger('total_tagihan')->default(0);
             $table->timestamps();
             $table->softDeletes();

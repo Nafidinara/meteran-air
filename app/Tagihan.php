@@ -14,13 +14,15 @@ class Tagihan extends Model
 {
     use softDeletes;
 
-    protected $primaryKey = "tagihan_id";
+    protected $primaryKey = 'tagihan_id';
     protected $table = 'tagihans';
 
     protected $fillable = [
         'pelanggan_id','mtr_awal','mtr_akhir','mtr_jumlah','harga_m2','jml_m2',
         'beban','hutang','simpanan','simp_status','total_tagihan'
     ];
+
+    protected $dates = ['deleted_at'];
 
     public function pelanggan()
     {

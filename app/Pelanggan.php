@@ -16,13 +16,19 @@ class Pelanggan extends Model
 
     protected $table = 'pelanggans';
 
-    protected $primaryKey = "pelanggan_id";
+    protected $primaryKey = 'pelanggan_id';
 
     protected $fillable = [
         'nama','level','telfon'
     ];
 
+    protected $dates = ['deleted_at'];
+
     public function tagihan(){
         return $this->hasMany(Tagihan::class,'pelanggan_id');
+    }
+
+    public function rekening(){
+        return $this->hasMany(Rekening::class,'pelanggan_id');
     }
 }

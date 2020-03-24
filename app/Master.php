@@ -20,4 +20,6 @@ class Master extends Model
     protected $fillable = [
         'harga_m2_msy','harga_m2_brh','beban'
     ];
+
+    protected $dates = ['deleted_at'];
 }
